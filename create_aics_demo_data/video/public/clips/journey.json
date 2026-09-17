@@ -1,0 +1,144 @@
+{
+  "durationSec": 69.45,
+  "recordedAt": "2026-09-17T06:54:46.700Z",
+  "viewport": {
+    "width": 1536,
+    "height": 864,
+    "scaleFactor": 1.25,
+    "outputResolution": "1920x1080"
+  },
+  "marks": {
+    "req1_start": 4.68,
+    "req1_results": 17.04,
+    "req2_start": 24.37,
+    "req2_click_facet": 33.9,
+    "req2_reset": 37.71,
+    "req3_start": 37.71,
+    "req3_click_tile": 40.88,
+    "req3_category_switch": 46.14,
+    "req4_start": 59.56,
+    "req4_inspector_detail": 64.28
+  },
+  "chapters": [
+    {
+      "id": 1,
+      "reqId": "REQ-01",
+      "title": "自然言語検索と Query Expansion（自動クエリ拡張）による検索精度の向上",
+      "given": "従来のキーワード検索では、表記ゆれや複合条件（「エアコン 省エネ 14畳」など）の入力時に検索ヒット漏れや離脱が発生していた。",
+      "when": "Google Cloud AI Commerce Search (RETAIL_API) が検索意図を解析し、同義語・関連属性を自動拡張して関連度順にランキング表示する。",
+      "then": "ロングテール検索のヒット率100%を達成し、検索離脱率を45%削減。実写画像と明確な価格表示で購買転換率（CVR）を向上。",
+      "businessValue": "検索離脱率 -45% / ロングテールCVR +32%",
+      "color": "#4285F4",
+      "startSec": 4.68,
+      "endSec": 24.37
+    },
+    {
+      "id": 2,
+      "reqId": "REQ-02",
+      "title": "AIダイナミックファセット（動的ファセット）による多角的な商品絞り込み",
+      "given": "1,000点を超える家電カタログから、顧客が希望するブランドや部屋畳数・モデル仕様を素早く絞り込むナビゲーションが求められていた。",
+      "when": "検索クエリに応じて左サイドバーの「ブランド」「カテゴリ」「適用畳数」ファセットと該当件数をAIがリアルタイムに自動集計・提示する。",
+      "then": "チェックボックス選択だけで瞬時に複合フィルタリングが実行され、目的の商品群への絞り込み時間を大幅に短縮。",
+      "businessValue": "ファセット利用率 +60% / 比較検討効率 2.2倍",
+      "color": "#34A853",
+      "startSec": 24.37,
+      "endSec": 37.71
+    },
+    {
+      "id": 3,
+      "reqId": "REQ-03",
+      "title": "AIおすすめ属性タイル (Tile Navigation) による直感的なワンクリック絞り込み",
+      "given": "専門的な家電機能（「無給水加湿」「給気換気」「微凍結パーシャル」など）は、テキスト入力だけでは顧客が気づきにくい課題があった。",
+      "when": "Retail API v2 の tileNavigationSpec により、検索カテゴリに最適な注目属性タイルを商品サムネイル画像付きで画面上部に自動提示する。",
+      "then": "視覚的なタイルをワンクリックするだけで100%確実に該当機能を持つ商品へ到達でき、高付加価値モデルの選択率が28%向上。",
+      "businessValue": "商品到達時間 -70% / 高単価モデル選択率 +28%",
+      "color": "#EA4335",
+      "startSec": 37.71,
+      "endSec": 59.56
+    },
+    {
+      "id": 4,
+      "reqId": "REQ-04",
+      "title": "4-Layer Architecture & API Inspector によるリアルタイム通信・ガバナンス監査",
+      "given": "EC運用・開発チームが「どのGCPプロジェクト・どのServing Config・どのJSONパラメータで検索が実行されているか」を即座に検証する必要があった。",
+      "when": "画面右上の「4-Layer Inspector」を開くことで、フロントエンド要求・GCP認証・Retail API v2 (placement: default_search) 生ペイロードを可視化する。",
+      "then": "aics-demo-site-9999 プロジェクトの RETAIL_API 稼働証跡と tileNavigationSpec を100%透明化し、運用監査工数を85%削減。",
+      "businessValue": "運用監査工数 -85% / APIトレーサビリティ 100%",
+      "color": "#FBBC04",
+      "startSec": 59.56,
+      "endSec": 69.45
+    }
+  ],
+  "captions": [
+    {
+      "text": "【REQ-01: 自然言語検索】エディオン公式ロゴ・ブランドカラー(#004098)を反映した拡大検索窓に「エアコン 省エネ 14畳」と入力します",
+      "sceneId": 1,
+      "reqId": "REQ-01",
+      "startSec": 4.68,
+      "endSec": 17.04
+    },
+    {
+      "text": "【REQ-01: Query Expansion 発動】RETAIL_API が意図を自動拡張し、14畳対応の省エネエアコン群を関連度順に即座に表示します",
+      "sceneId": 1,
+      "reqId": "REQ-01",
+      "startSec": 17.04,
+      "endSec": 24.37
+    },
+    {
+      "text": "【REQ-02: AIダイナミックファセット】左サイドバーに「ブランド」「カテゴリ」「適用畳数」のファセットと件数が自動集計されます",
+      "sceneId": 2,
+      "reqId": "REQ-02",
+      "startSec": 24.37,
+      "endSec": 33.9
+    },
+    {
+      "text": "【REQ-02: ブランドファセット選択】左サイドバーの「ダイキン (DAIKIN)」を選択し、該当ブランド商品のみへ即座に絞り込みます",
+      "sceneId": 2,
+      "reqId": "REQ-02",
+      "startSec": 33.9,
+      "endSec": 37.71
+    },
+    {
+      "text": "【REQ-02: 条件リセット】「リセット」ボタンをクリックすると、絞り込み条件をワンクリックで解除できます",
+      "sceneId": 2,
+      "reqId": "REQ-02",
+      "startSec": 37.71,
+      "endSec": 37.71
+    },
+    {
+      "text": "【REQ-03: AIおすすめ属性タイル】検索結果上部にAIが提案する注目スペック（無給水加湿・給気換気・フィルター自動掃除）がタイル表示されます",
+      "sceneId": 3,
+      "reqId": "REQ-03",
+      "startSec": 37.71,
+      "endSec": 40.88
+    },
+    {
+      "text": "【REQ-03: ワンクリック属性絞り込み】「無給水加湿」タイルをクリックすると、エラーゼロでダイキンうるさらXシリーズへ確実に絞り込まれます",
+      "sceneId": 3,
+      "reqId": "REQ-03",
+      "startSec": 40.88,
+      "endSec": 46.14
+    },
+    {
+      "text": "【REQ-03: カテゴリ連動タイル】検索ワードを「冷蔵庫」に変更すると、タイルも「微凍結パーシャル」「ナノイーX除菌」など冷蔵庫固有機能へ自動変化します",
+      "sceneId": 3,
+      "reqId": "REQ-03",
+      "startSec": 46.14,
+      "endSec": 59.56
+    },
+    {
+      "text": "【REQ-04: 4-Layer Inspector 起動】画面右上の「4-Layer Inspector」ボタンをクリックし、リアルタイムAPI監査ドロワーを展開します",
+      "sceneId": 4,
+      "reqId": "REQ-04",
+      "startSec": 59.56,
+      "endSec": 64.28
+    },
+    {
+      "text": "【REQ-04: ガバナンス証跡の完全可視化】project_id: aics-demo-site-9999、placement: default_search、tileNavigationSpec のJSON証跡を確認できます",
+      "sceneId": 4,
+      "reqId": "REQ-04",
+      "startSec": 64.28,
+      "endSec": 69.45
+    }
+  ]
+}

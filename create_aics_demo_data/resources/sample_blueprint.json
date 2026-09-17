@@ -1,0 +1,136 @@
+{
+  "brand_profile": {
+    "brand_name": "NITORI",
+    "display_title": "ニトリ AIコマース検索デモ",
+    "subtitle": "Powered by Google Cloud AI Commerce Search",
+    "domain": "https://www.nitori-net.jp",
+    "pdp_base_url": "https://www.nitori-net.jp/ec/product/",
+    "primary_color": "#009e96",
+    "secondary_color": "#1f2937",
+    "accent_color": "#e60012",
+    "currency_code": "JPY",
+    "language_code": "ja-JP",
+    "search_placeholder": "商品名、カテゴリ、部屋タイプ、機能で検索 (例: Nクール 敷きパッド、収納ベッド、ソファ 3人掛け)",
+    "demo_queries": [
+      "Nクール 敷きパッド",
+      "収納付きベッド シングル",
+      "3人掛けソファ カウチ",
+      "遮光カーテン 防炎",
+      "ワークチェア リクライニング",
+      "ダイニングテーブル 天然木",
+      "羽毛布団 かるふわ"
+    ]
+  },
+  "primary_seeds": [
+    {
+      "seed_id": "NT_SEED_001",
+      "title": "両面使える敷きパッド NクールSP",
+      "brand": "NITORI (ニトリ)",
+      "categories": [
+        "寝具・布団・식기 > 敷きパッド・ベッドパッド",
+        "Nクール(接触冷感)寝具 > 敷きパッド"
+      ],
+      "description": "接触冷感機能と吸放湿機能を備えた強冷感タイプの敷きパッド。春から秋まで長く使えるリバーシブル仕様で洗濯機で丸洗い可能。",
+      "base_price": 2990,
+      "original_price": 3490,
+      "image_url": "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&w=600&q=80",
+      "attributes": {
+        "cooling_level": ["強冷感 (NクールSP)"],
+        "feature": ["接触冷感", "抗菌防臭", "洗濯機OK", "リバーシブル"],
+        "material": ["ナイロン", "ポリエステル"]
+      },
+      "variant_axes": {
+        "size": [
+          {"label": "シングル (S)", "price_delta": 0},
+          {"label": "セミダブル (SD)", "price_delta": 1000},
+          {"label": "ダブル (D)", "price_delta": 2000}
+        ],
+        "color": [
+          {"label": "ブルー", "price_delta": 0},
+          {"label": "グレー", "price_delta": 0},
+          {"label": "ベージュ", "price_delta": 0}
+        ]
+      }
+    },
+    {
+      "seed_id": "NT_SEED_002",
+      "title": "コンセント・LED照明付き チェストベッド フレーム",
+      "brand": "NITORI (ニトリ)",
+      "categories": [
+        "ベッド・マットレス > ベッドフレーム > 収納付きベッド"
+      ],
+      "description": "大容量の深型・浅型引き出し4杯を備えたチェストベッド。ヘッドボードにはスマートフォン充電に便利なコンセントとLED照明を搭載。",
+      "base_price": 39900,
+      "original_price": 44900,
+      "image_url": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=600&q=80",
+      "attributes": {
+        "storage_type": ["引き出し4杯", "大容量チェスト"],
+        "headboard_feature": ["2口コンセント付", "LED照明付"],
+        "material": ["プリント紙化粧繊維板"]
+      },
+      "variant_axes": {
+        "size": [
+          {"label": "シングル (S)", "price_delta": 0},
+          {"label": "セミダブル (SD)", "price_delta": 10000}
+        ],
+        "color": [
+          {"label": "ホワイトウォッシュ", "price_delta": 0},
+          {"label": "ミドルブラウン", "price_delta": 0},
+          {"label": "ナチュラル", "price_delta": 0}
+        ]
+      }
+    },
+    {
+      "seed_id": "NT_SEED_003",
+      "title": "ポケットコイル カウチソファ 3人掛け (Nポケット)",
+      "brand": "NITORI (ニトリ)",
+      "categories": [
+        "ソファ・座椅子 > 3人掛けソファ",
+        "ソファ・座椅子 > カウチソファ"
+      ],
+      "description": "ベッドマットレスにも使われるポケットコイルを座面に採用し、体圧分散性と耐久性を高めた極上の座り心地のカウチソファ。",
+      "base_price": 79900,
+      "original_price": 89900,
+      "image_url": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=600&q=80",
+      "attributes": {
+        "seat_cushion": ["ポケットコイル"],
+        "cover_feature": ["カバーリング洗える", "撥水加工"],
+        "seating_capacity": ["3人掛け"]
+      },
+      "variant_axes": {
+        "color": [
+          {"label": "ダークモカ", "price_delta": 0},
+          {"label": "ターコイズブルー", "price_delta": 0},
+          {"label": "ライトグレー", "price_delta": 0}
+        ]
+      }
+    },
+    {
+      "seed_id": "NT_SEED_004",
+      "title": "遮光1級・遮熱・防炎・50サイズカーテン (RD016)",
+      "brand": "NITORI (ニトリ)",
+      "categories": [
+        "カーテン・ブラインド > ドレープカーテン > 遮光カーテン"
+      ],
+      "description": "日差しと熱をしっかりカットする遮光1級・遮熱仕様。冷暖房効率を高め省エネに貢献する高機能ドレープカーテン2枚組。",
+      "base_price": 4990,
+      "original_price": 5990,
+      "image_url": "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80",
+      "attributes": {
+        "shading_grade": ["遮光1級"],
+        "function": ["遮熱", "防炎", "洗濯機OK", "形状記憶加工"]
+      },
+      "variant_axes": {
+        "size": [
+          {"label": "幅100×丈135cm×2枚", "price_delta": 0},
+          {"label": "幅100×丈178cm×2枚", "price_delta": 1000},
+          {"label": "幅100×丈200cm×2枚", "price_delta": 1500}
+        ],
+        "color": [
+          {"label": "アイボリー", "price_delta": 0},
+          {"label": "ローズ", "price_delta": 0}
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="pageTitle">AIコマース検索デモ | Google Cloud Retail Search</title>
+  <link rel="stylesheet" href="/static/css/theme.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Pretendard:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Brand Header -->
+  <header class="brand-header">
+    <div class="header-container">
+      <a href="/" class="brand-logo-wrap">
+        <img id="brandLogoImg" class="brand-logo-img" style="display:none;" alt="Brand Logo" />
+        <div id="brandBadge" class="brand-badge">BRAND</div>
+        <div class="brand-titles">
+          <h1 id="brandTitle">AIコマース検索デモ</h1>
+          <span id="brandSubtitle">Powered by Google Cloud AI Commerce Search</span>
+        </div>
+      </a>
+
+      <!-- Search Box -->
+      <div class="search-box-wrap">
+        <form id="searchForm" class="search-form" onsubmit="return false;">
+          <input
+            type="text"
+            id="searchInput"
+            class="search-input"
+            placeholder="商品名、ブランド、カテゴリ、スペックで検索..."
+            autocomplete="off"
+          />
+          <button type="submit" id="searchSubmitBtn" class="search-submit-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <span id="searchBtnText">検索</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- Header Controls: QE Toggle & Inspector Button -->
+      <div class="header-controls">
+        <label class="qe-toggle" title="Google Cloud Retail Search Query Expansion (同義語・表記ゆれ自動拡張)">
+          <input type="checkbox" id="qeCheckbox" checked />
+          <span class="qe-pill"><span id="qeLabelPrefix">⚡ 拡張検索 (QE):</span> <strong id="qeStateText">ON</strong></span>
+        </label>
+
+        <button id="openInspectorBtn" class="inspector-btn">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+          4-Layer Inspector
+        </button>
+      </div>
+    </div>
+
+    <!-- Category Navigation Bar -->
+    <nav class="category-nav">
+      <div class="category-nav-inner" id="categoryTabsContainer">
+        <button class="cat-tab active" data-category="" id="allCategoryTab">すべての商品</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Recommended Demo Queries Bar -->
+  <section class="demo-queries-bar">
+    <div class="demo-queries-inner">
+      <span id="demoQueriesLabel" class="demo-queries-label">💡 おすすめ検索ワード:</span>
+      <div id="demoQueriesContainer" class="demo-chips-list"></div>
+    </div>
+  </section>
+
+  <!-- Main Workspace -->
+  <main class="main-container">
+    <!-- Left Sidebar: Dynamic Facets -->
+    <aside class="facets-sidebar">
+      <div class="sidebar-header">
+        <h3 id="facetsSidebarTitle">AIダイナミックファセット</h3>
+        <button id="clearFiltersBtn" class="clear-filters-btn" style="display:none;">リセット</button>
+      </div>
+      <div id="activeFiltersBar" class="active-filters-bar" style="display:none;"></div>
+      <div id="facetsContainer" class="facets-groups"></div>
+    </aside>
+
+    <!-- Right Content Area -->
+    <section class="results-section">
+      <!-- Status & Metrics Banner -->
+      <div class="results-status-bar">
+        <div class="status-left">
+          <span id="totalResultsText" class="total-count">検索結果 <strong>0</strong>件</span>
+          <span id="engineBadge" class="engine-badge badge-auto">ENGINE: READY</span>
+          <span id="latencyBadge" class="latency-badge">0 ms</span>
+          <span id="qeStatusBadge" class="qe-status-badge" style="display:none;">⚡ Query Expansion 適用中</span>
+        </div>
+
+        <div class="status-right">
+          <select id="sortSelect" class="sort-select">
+            <option value="" id="sortOptRelevance">🎯 AI関連度順 (おすすめ順)</option>
+            <option value="price asc" id="sortOptPriceAsc">💰 価格が安い順</option>
+            <option value="price desc" id="sortOptPriceDesc">💎 価格が高い順</option>
+            <option value="rating desc" id="sortOptRatingDesc">⭐ 評価が高い順</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Visual Tile Navigation Carousel -->
+      <div id="tileNavSection" class="tile-nav-section" style="display:none;">
+        <div id="tileNavTitle" class="tile-nav-title">✨ AIおすすめ属性タイル (Tile Navigation)</div>
+        <div id="tileNavContainer" class="tile-nav-carousel"></div>
+      </div>
+
+      <!-- Product Grid -->
+      <div id="productGrid" class="product-grid"></div>
+    </section>
+  </main>
+
+  <!-- 4-Layer Architecture Inspector Drawer -->
+  <aside id="inspectorDrawer" class="inspector-drawer">
+    <div class="inspector-header">
+      <div>
+        <h3>🔍 AICS 4-Layer Architecture Inspector</h3>
+        <p>Client ➔ FastAPI Relay ➔ Retail API / BigQuery SQL ➔ UI Rendering</p>
+      </div>
+      <button id="closeInspectorBtn" class="close-inspector-btn">✕</button>
+    </div>
+    <div class="inspector-body">
+      <div class="inspector-layer">
+        <div class="layer-title">❶ Client Search Request (Frontend ➔ Relay API)</div>
+        <pre id="inspectorLayer1" class="code-box">{}</pre>
+      </div>
+      <div class="inspector-layer">
+        <div class="layer-title">❷ GCP Auth & BigQuery / Catalog Metadata</div>
+        <pre id="inspectorLayer2" class="code-box">{}</pre>
+      </div>
+      <div class="inspector-layer">
+        <div class="layer-title">❸ Upstream Engine Request & SQL / Retail Payload</div>
+        <pre id="inspectorLayer3" class="code-box">{}</pre>
+      </div>
+      <div class="inspector-layer">
+        <div class="layer-title">❹ Upstream Response & Facet/Variant Rollup Summary</div>
+        <pre id="inspectorLayer4" class="code-box">{}</pre>
+      </div>
+    </div>
+  </aside>
+
+  <script src="/static/js/inspector.js"></script>
+  <script src="/static/js/app.js"></script>
+</body>
+</html>

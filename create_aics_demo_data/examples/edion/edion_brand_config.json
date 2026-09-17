@@ -1,0 +1,40 @@
+{
+  "brand_name": "EDION",
+  "display_title": "エディオンネットショップ | AI商品検索デモ",
+  "subtitle": "Powered by Google Cloud AI Commerce Search",
+  "domain": "https://www.edion.com",
+  "pdp_base_url": "https://www.edion.com/detail.html?p_cd=",
+  "primary_color": "#004098",
+  "secondary_color": "#0f172a",
+  "accent_color": "#ff6600",
+  "currency_code": "JPY",
+  "language_code": "ja-JP",
+  "search_placeholder": "商品名、メーカー、型番、部屋畳数、機能で検索 (例: ダイキン エアコン 6畳、e angle 冷蔵庫、ドラム式洗濯機)",
+  "demo_queries": [
+    "ダイキン エアコン",
+    "エアコン 6畳 省エネ",
+    "エアコ",
+    "パナソニック 冷蔵庫",
+    "ドラム式洗濯機",
+    "e angle",
+    "オーブンレンジ ビストロ",
+    "コードレス掃除機"
+  ],
+  "categories": [
+    "エアコン・季節家電",
+    "省エネ・高機能家電",
+    "冷蔵庫・キッチン家電",
+    "e angle (エディオンオリジナル)",
+    "洗濯機・生活家電",
+    "テレビ・オーディオ"
+  ],
+  "catalog_stats": {
+    "total_records": 161,
+    "primary_count": 35,
+    "variant_count": 126,
+    "missing_required_fields": 0,
+    "orphan_variants": 0,
+    "valid": true
+  },
+  "generated_at": "2026-09-17T02:25:51.329459+00:00"
+}

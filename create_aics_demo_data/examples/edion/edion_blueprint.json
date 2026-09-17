@@ -1,0 +1,386 @@
+{
+  "brand_profile": {
+    "brand_name": "EDION",
+    "display_title": "エディオンネットショップ | AI商品検索デモ",
+    "subtitle": "Powered by Google Cloud AI Commerce Search",
+    "domain": "https://www.edion.com",
+    "pdp_base_url": "https://www.edion.com/detail.html?p_cd=",
+    "primary_color": "#004098",
+    "secondary_color": "#0f172a",
+    "accent_color": "#ff6600",
+    "currency_code": "JPY",
+    "language_code": "ja-JP",
+    "search_placeholder": "商品名、メーカー、型番、部屋畳数、機能で検索 (例: ダイキン エアコン 6畳、パナソニック 冷蔵庫、ドラム式洗濯機、PS5)",
+    "demo_queries": [
+      "ダイキン エアコン",
+      "エアコン 6畳 省エネ",
+      "エアコ",
+      "パナソニック 冷蔵庫",
+      "ドラム式洗濯機",
+      "ビートウォッシュ",
+      "オーブンレンジ ビストロ",
+      "コードレス掃除機",
+      "PlayStation 5",
+      "ナノケア ドライヤー"
+    ]
+  },
+  "primary_seeds": [
+    {
+      "seed_id": "ED_AC_001",
+      "title": "ダイキン うるさらX RXシリーズ 加湿・除湿ルームエアコン",
+      "brand": "ダイキン (DAIKIN)",
+      "categories": [
+        "エアコン・季節家電 > ルームエアコン",
+        "省エネ・高機能家電 > エアコン"
+      ],
+      "description": "無給水加湿「うるる加湿」と換気機能、AI快適自動運転を搭載したダイキン最上位フラッグシップモデル。フィルター自動お掃除機能付きで省エネ性能もトップクラス。",
+      "base_price": 168000,
+      "original_price": 198000,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/DAIKIN_AIR_CONDITIONER_INDOOR_UNIT_%2814%29.jpg/960px-DAIKIN_AIR_CONDITIONER_INDOOR_UNIT_%2814%29.jpg",
+      "attributes": {
+        "feature": ["無給水加湿", "給気換気", "フィルター自動掃除", "AI快適自動", "省エネ達成率114%"],
+        "series": ["うるさらX (RXシリーズ)"],
+        "energy_saving": ["省エネ基準達成"]
+      },
+      "variant_axes": {
+        "room_capacity": [
+          {"label": "6畳用 (2.2kW・100V)", "price_delta": 0},
+          {"label": "10畳用 (2.8kW・100V)", "price_delta": 35000},
+          {"label": "14畳用 (4.0kW・200V)", "price_delta": 72000}
+        ]
+      }
+    },
+    {
+      "seed_id": "ED_AC_002",
+      "title": "パナソニック エオリア LXシリーズ ナノイーX搭載ルームエアコン",
+      "brand": "パナソニック (Panasonic)",
+      "categories": [
+        "エアコン・季節家電 > ルームエアコン"
+      ],
+      "description": "ナノイーX(48兆)を搭載し、お部屋の空気とエアコン内部を清潔に保つエオリア最上位モデル。換気・加湿・新エネチャージ機能搭載。",
+      "base_price": 158000,
+      "original_price": 185000,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Panasonic_AIR_CONDITIONER_INDOOR_UNIT_CS-C10KJ2.jpg/960px-Panasonic_AIR_CONDITIONER_INDOOR_UNIT_CS-C10KJ2.jpg",
+      "attributes": {
+        "feature": ["ナノイーX(48兆)", "フィルター自動掃除", "AIセンサー", "スマホ連携"],
+        "series": ["エオリア (Eolia LX)"],
+        "energy_saving": ["省エネ基準達成"]
+      },
+      "variant_axes": {
+        "room_capacity": [
+          {"label": "6畳用 (2.2kW)", "price_delta": 0},
+          {"label": "10畳用 (2.8kW)", "price_delta": 28000}
+        ]
+      }
+    },
+    {
+      "seed_id": "ED_AC_003",
+      "title": "三菱電機 霧ヶ峰 Zシリーズ ムーブアイmirA.I.+搭載エアコン",
+      "brand": "三菱電機 (MITSUBISHI)",
+      "categories": [
+        "エアコン・季節家電 > ルームエアコン"
+      ],
+      "description": "360度センシング「ムーブアイmirA.I.+」が体感温度や部屋の温まりやすさを先読みして快適・省エネ空調を実現する霧ヶ峰プレミアムモデル。",
+      "base_price": 149800,
+      "original_price": 178000,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/MITSUBISHI_ELECTRIC_AIR_CONDITIONER_INDOOR_UNIT.jpg/960px-MITSUBISHI_ELECTRIC_AIR_CONDITIONER_INDOOR_UNIT.jpg",
+      "attributes": {
+        "feature": ["ムーブアイmirA.I.+", "はずせるボディ", "フィルター自動掃除", "省エネ"],
+        "series": ["霧ヶ峰 (Zシリーズ)"]
+      },
+      "variant_axes": {
+        "room_capacity": [
+          {"label": "6畳用 (2.2kW)", "price_delta": 0},
+          {"label": "12畳用 (3.6kW)", "price_delta": 48000}
+        ]
+      }
+    },
+    {
+      "seed_id": "ED_REF_001",
+      "title": "パナソニック 微凍結パーシャル＆ナノイーX搭載 大型冷蔵庫",
+      "brand": "パナソニック (Panasonic)",
+      "categories": [
+        "冷蔵庫・キッチン家電 > 冷蔵庫・冷凍庫 > 大型冷蔵庫"
+      ],
+      "description": "約-3℃で鮮度を長持ちさせる「微凍結パーシャル」と「はやうま冷凍」を搭載した大容量省エネインバーター冷蔵庫。",
+      "base_price": 218000,
+      "original_price": 248000,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Panasonic_HOME_REFRIGERATOR_NR-C320WP-N.jpg/960px-Panasonic_HOME_REFRIGERATOR_NR-C320WP-N.jpg",
+      "attributes": {
+        "feature": ["微凍結パーシャル", "ナノイーX除菌", "はやうま冷凍", "AIエコナビ"],
+        "door_type": ["観音開き・多ドア"]
+      },
+      "variant_axes": {
+        "capacity": [
+          {"label": "450L (幅60cmスリム)", "price_delta": 0},
+          {"label": "501L (ファミリー標準)", "price_delta": 25000}
+        ]
+      }
+    },
+    {
+      "seed_id": "ED_REF_002",
+      "title": "e angle レトロデザイン 149L 2ドア冷蔵庫 (エディオンオリジナル)",
+      "brand": "e angle (エディオンPB)",
+      "categories": [
+        "冷蔵庫・キッチン家電 > 冷蔵庫・冷凍庫 > 一人暮らし・小型冷蔵庫",
+        "e angle (エディオンオリジナル) > キッチン家電"
+      ],
+      "description": "エディオンプライベートブランド「e angle」の大人気レトロスタイル冷蔵庫。インテリアに映えるハンドルデザインと静音設計、大容量冷凍室を兼備。",
+      "base_price": 54800,
+      "original_price": 59800,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Foire_de_Paris_2011_-_Smeg_-_R%C3%A9frig%C3%A9rateurs_-_001.jpg/960px-Foire_de_Paris_2011_-_Smeg_-_R%C3%A9frig%C3%A9rateurs_-_001.jpg",
+      "attributes": {
+        "feature": ["エディオン限定PB", "レトロデザイン", "静音設計", "ファン式自動霜取り"],
+        "door_type": ["右開き・2ドア"]
+      },
+      "variant_axes": {
+        "color": [
+          {"label": "レトロホワイト", "price_delta": 0},
+          {"label": "レトロブラック", "price_delta": 0}
+        ]
+      }
+    },
+    {
+      "seed_id": "ED_WASH_001",
+      "title": "パナソニック ななめドラム洗濯乾燥機 LXシリーズ トリプル自動投入",
+      "brand": "パナソニック (Panasonic)",
+      "categories": [
+        "洗濯機・生活家電 > 洗濯機 > ドラム式洗濯乾燥機"
+      ],
+      "description": "液体洗剤・柔軟剤・おしゃれ着洗剤の「トリプル自動投入」と「はやふわ乾燥ヒートポンプ」を搭載したドラム式洗濯乾燥機。",
+      "base_price": 268000,
+      "original_price": 298000,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Fagor_washing_machine_front_FF6314.jpg/960px-Fagor_washing_machine_front_FF6314.jpg",
+      "attributes": {
+        "feature": ["トリプル自動投入", "ヒートポンプ乾燥", "温水スゴ落ち泡洗浄", "ナノイーX槽クリーン"],
+        "washer_type": ["ドラム式洗濯乾燥機"]
+      },
+      "variant_axes": {
+        "door_direction": [
+          {"label": "洗濯12kg/乾燥6kg・左開き", "price_delta": 0},
+          {"label": "洗濯12kg/乾燥6kg・右開き", "price_delta": 0}
+        ]
+      }
+    },
+    {
+      "seed_id": "ED_WASH_002",
+      "title": "日立 ビートウォッシュ ナイアガラビート洗浄 縦型全自動洗濯機",
+      "brand": "日立 (HITACHI)",
+      "categories": [
+        "洗濯機・生活家電 > 洗濯機 > 縦型全自動洗濯機"
+      ],
+      "description": "高濃度洗剤液と大流量ナイアガラシャワーで頑固な汚れもすっきり落とす「ナイアガラ ビート洗浄」＆AIお洗濯搭載のインバーター全自動洗濯機。",
+      "base_price": 98000,
+      "original_price": 118000,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Hitachi_Washer_2023Spring.jpg/960px-Hitachi_Washer_2023Spring.jpg",
+      "attributes": {
+        "feature": ["ナイアガラビート洗浄", "液体洗剤・柔軟剤自動投入", "AIお洗濯", "インバーター静音"],
+        "washer_type": ["縦型全自動洗濯機"]
+      },
+      "variant_axes": {
+        "capacity": [
+          {"label": "洗濯 8.0kg", "price_delta": 0},
+          {"label": "洗濯 10.0kg", "price_delta": 20000}
+        ]
+      }
+    },
+    {
+      "seed_id": "ED_MW_001",
+      "title": "パナソニック スチームオーブンレンジ 30L ビストロ (Bistro)",
+      "brand": "パナソニック (Panasonic)",
+      "categories": [
+        "冷蔵庫・キッチン家電 > 電子レンジ・オーブンレンジ"
+      ],
+      "description": "ヒートグリル皿と高精細スピードセンサーにより、裏返さずに両面こんがり焼き上げる過熱水蒸気スチームオーブンレンジ最上位ビストロ。",
+      "base_price": 118000,
+      "original_price": 138000,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Black_Panasonic_Microwave.jpg/960px-Black_Panasonic_Microwave.jpg",
+      "attributes": {
+        "feature": ["スピードセンサー", "両面グリル", "ワンボウル調理", "過熱水蒸気スチーム"],
+        "series": ["ビストロ (Bistro)"]
+      },
+      "variant_axes": {
+        "color": [
+          {"label": "ブラック", "price_delta": 0},
+          {"label": "オフホワイト", "price_delta": 0}
+        ]
+      }
+    },
+    {
+      "seed_id": "ED_RC_001",
+      "title": "象印 圧力IH炊飯ジャー 炎舞炊き 豪炎かまど釜",
+      "brand": "象印 (ZOJIRUSHI)",
+      "categories": [
+        "冷蔵庫・キッチン家電 > 炊飯器"
+      ],
+      "description": "底IHヒーターを複数ブロックに分け、対流を引き起こす「炎舞炊き」で甘みともちもち感を引き出す最高峰圧力IHジャー炊飯器。",
+      "base_price": 64800,
+      "original_price": 74800,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/ZOJIRUSHI_EL-MB30.jpg/960px-ZOJIRUSHI_EL-MB30.jpg",
+      "attributes": {
+        "feature": ["圧力IH", "炎舞炊き", "わが家炊きメニュー", "40時間極め保温"],
+        "series": ["炎舞炊き"]
+      },
+      "variant_axes": {
+        "capacity": [
+          {"label": "5.5合炊き", "price_delta": 0},
+          {"label": "1升(10合)炊き", "price_delta": 12000}
+        ]
+      }
+    },
+    {
+      "seed_id": "ED_VC_001",
+      "title": "ダイソン Cyclone V10 / V12 Detect Slim コードレススティッククリーナー",
+      "brand": "ダイソン (Dyson)",
+      "categories": [
+        "洗濯機・生活家電 > 掃除機 > コードレススティッククリーナー"
+      ],
+      "description": "毎分最大125,000回転のデジタルモーターとサイクロンテクノロジーにより、微細なホコリから大きなゴミまでパワフルに吸引するコードレス掃除機。",
+      "base_price": 59800,
+      "original_price": 69800,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Dyson_Cyclone_V10_Absolute_cordless_stick_vacuum.jpg/960px-Dyson_Cyclone_V10_Absolute_cordless_stick_vacuum.jpg",
+      "attributes": {
+        "feature": ["デジタルモーター", "サイクロン吸引", "軽量コードレス", "付属ツールセット"],
+        "series": ["Dyson Cyclone"]
+      },
+      "variant_axes": {
+        "package_option": [
+          {"label": "Fluffy 標準セット", "price_delta": 0},
+          {"label": "Absolute コンプリートセット", "price_delta": 10000}
+        ]
+      }
+    },
+    {
+      "seed_id": "ED_VC_002",
+      "title": "e angle 軽量コードレススティッククリーナー 自走式パワーヘッド",
+      "brand": "e angle (エディオンPB)",
+      "categories": [
+        "洗濯機・生活家電 > 掃除機 > コードレススティッククリーナー",
+        "e angle (エディオンオリジナル) > 生活家電"
+      ],
+      "description": "軽量ボディと自走式パワーブラシを備え、毎日の床掃除からハンディ掃除まで手軽に使えるエディオン大人気オリジナルコードレスクリーナー。",
+      "base_price": 29800,
+      "original_price": 34800,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Dyson_V6_cordless_stick_vacuum.jpg/960px-Dyson_V6_cordless_stick_vacuum.jpg",
+      "attributes": {
+        "feature": ["エディオン限定PB", "軽量設計", "自走式パワーヘッド", "2WAYハンディ"]
+      },
+      "variant_axes": {
+        "color": [
+          {"label": "シルバーグレー", "price_delta": 0},
+          {"label": "マットホワイト", "price_delta": 0}
+        ]
+      }
+    },
+    {
+      "seed_id": "ED_TV_001",
+      "title": "ソニー 4K液晶・有機ELテレビ BRAVIA (ブラビア) 高画質プロセッサー搭載",
+      "brand": "ソニー (SONY)",
+      "categories": [
+        "テレビ・オーディオ > 4K有機EL・液晶テレビ"
+      ],
+      "description": "高画質プロセッサーと高音質スピーカーシステムを搭載し、映画やスポーツを臨場感あふれる映像で楽しめるソニー BRAVIA。",
+      "base_price": 178000,
+      "original_price": 218000,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Sony_Bravia_KDL-Z4500.jpg/960px-Sony_Bravia_KDL-Z4500.jpg",
+      "attributes": {
+        "feature": ["高画質プロセッサー", "倍速駆動パネル", "Google TV搭載", "Dolby Atmos対応"],
+        "series": ["BRAVIA (ブラビア)"]
+      },
+      "variant_axes": {
+        "screen_size": [
+          {"label": "55V型 (55インチ)", "price_delta": 0},
+          {"label": "65V型 (65インチ)", "price_delta": 60000}
+        ]
+      }
+    },
+    {
+      "seed_id": "ED_PC_001",
+      "title": "富士通 FMV LIFEBOOK 超軽量モバイルノートパソコン Office搭載",
+      "brand": "富士通 (FUJITSU)",
+      "categories": [
+        "パソコン・周辺機器 > ノートパソコン"
+      ],
+      "description": "打ちやすい日本語JIS配列キーボードと軽量ボディ、長時間バッテリーを備えた富士通FMV LIFEBOOKノートパソコン。Microsoft Office Home & Business付属。",
+      "base_price": 164800,
+      "original_price": 189800,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Fujitsu_Lifebook_A577-S.jpg/960px-Fujitsu_Lifebook_A577-S.jpg",
+      "attributes": {
+        "feature": ["日本語JISキーボード", "Office搭載", "Wi-Fi 6E対応", "指紋センサー"],
+        "series": ["FMV LIFEBOOK"]
+      },
+      "variant_axes": {
+        "storage_ssd": [
+          {"label": "Core i5 / メモリ16GB / SSD 512GB", "price_delta": 0},
+          {"label": "Core i7 / メモリ16GB / SSD 1TB", "price_delta": 32000}
+        ]
+      }
+    },
+    {
+      "seed_id": "ED_GAME_001",
+      "title": "ソニー PlayStation 5 (PS5) 本体 ディスクドライブ搭載モデル",
+      "brand": "ソニー・インタラクティブエンタテインメント (SIE)",
+      "categories": [
+        "ゲーム・ホビー > PlayStation 5 > 本体"
+      ],
+      "description": "超高速SSDによる驚異の読み込み速度と、ハプティックフィードバック対応DualSenseワイヤレスコントローラーによる深い没入感を実現するPlayStation 5本体。",
+      "base_price": 79980,
+      "original_price": 84980,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/PlayStation_5_and_DualSense.jpg/960px-PlayStation_5_and_DualSense.jpg",
+      "attributes": {
+        "feature": ["4K/120fps対応", "超高速SSD 1TB", "DualSense同梱", "ディスクドライブ搭載"],
+        "series": ["PlayStation 5"]
+      },
+      "variant_axes": {
+        "package_option": [
+          {"label": "通常版 (コントローラー1台)", "price_delta": 0},
+          {"label": "DualSense ダブルパック", "price_delta": 9500}
+        ]
+      }
+    },
+    {
+      "seed_id": "ED_BEAUTY_001",
+      "title": "パナソニック ヘアードライヤー ナノケア 高浸透ナノイー＆ミネラル",
+      "brand": "パナソニック (Panasonic)",
+      "categories": [
+        "美容・健康家電 > ヘアーケア > ヘアードライヤー"
+      ],
+      "description": "高浸透ナノイーとミネラルマイナスイオンが髪の内側までうるおいを届け、速乾かつツヤのある美しい髪へ導くパナソニック最上位ヘアドライヤー。",
+      "base_price": 34800,
+      "original_price": 38800,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/TW_%E5%8F%B0%E6%B9%BE_Taipei_%E5%8F%B0%E5%8C%97_Hotel_Metropolitan_Premier_Taipei_%E9%85%92%E5%BA%97%E6%88%BF%E9%96%93_hotel_bathroom_supplies_%E5%90%B9%E9%A2%A8%E7%AD%92_Hair_dryer_March_2024_R12S.jpg/960px-TW_%E5%8F%B0%E6%B9%BE_Taipei_%E5%8F%B0%E5%8C%97_Hotel_Metropolitan_Premier_Taipei_%E9%85%92%E5%BA%97%E6%88%BF%E9%96%93_hotel_bathroom_supplies_%E5%90%B9%E9%A2%A8%E7%AD%92_Hair_dryer_March_2024_R12S.jpg",
+      "attributes": {
+        "feature": ["高浸透ナノイー", "大風量速乾", "温冷リズムモード", "スカルプモード"],
+        "series": ["ナノケア (Nanocare)"]
+      },
+      "variant_axes": {
+        "color": [
+          {"label": "ディープネイビー", "price_delta": 0},
+          {"label": "ウォームホワイト", "price_delta": 0}
+        ]
+      }
+    },
+    {
+      "seed_id": "ED_AIR_001",
+      "title": "シャープ 加湿空気清浄機 プラズマクラスターNEXT 高濃度イオン搭載",
+      "brand": "シャープ (SHARP)",
+      "categories": [
+        "エアコン・季節家電 > 空気清浄機・加湿器"
+      ],
+      "description": "50,000個/cm3の高濃度イオン「プラズマクラスターNEXT」と3方向気流制御、自動掃除パワーユニットを搭載したプレミアム加湿空気清浄機。",
+      "base_price": 58000,
+      "original_price": 68000,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Xiaomi_Smart_Air_Purifier_2S.jpg/960px-Xiaomi_Smart_Air_Purifier_2S.jpg",
+      "attributes": {
+        "feature": ["プラズマクラスターNEXT", "加湿機能", "静電HEPAフィルター", "自動掃除ユニット"],
+        "series": ["プラズマクラスター"]
+      },
+      "variant_axes": {
+        "room_capacity": [
+          {"label": "空気清浄〜23畳 / 加湿〜15畳", "price_delta": 0},
+          {"label": "空気清浄〜31畳 / 加湿〜19畳", "price_delta": 14000}
+        ]
+      }
+    }
+  ]
+}
